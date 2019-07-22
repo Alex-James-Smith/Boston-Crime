@@ -4,7 +4,7 @@ library(magrittr)
 
 Boston_Crime <- read_csv("crime.csv", col_types = cols(OCCURRED_ON_DATE = col_datetime(format = "%Y-%m-%d %H:%M:%S"), SHOOTING = col_character()))
 
-## Remove unuseful columns
+## Remove unuseful column
 B_Crime <- Boston_Crime %>% select(-c(INCIDENT_NUMBER, OFFENSE_CODE, DISTRICT, REPORTING_AREA, Location))
 
 ## If Shooting is TRUE = 1, if FALSE = 0
